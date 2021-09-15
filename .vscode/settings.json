@@ -1,0 +1,6 @@
+{
+    "files.autoGuessEncoding": true,
+    "files.simpleDialog.enable": true,
+    "C_Cpp.errorSquiggles": "Enabled",
+    "csharpextensions.privateMemberPrefix": "_"
+}
