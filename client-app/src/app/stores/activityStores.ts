@@ -20,6 +20,16 @@ export default class ActivityStore {
             Date.parse(a.date) - Date.parse(b.date))
     }
 
+    get groupedActivities() {
+        return Object.entries(
+            this.ActivitiesByDate.reduce((ac, a) => {
+                const date = a.date;
+                ac[date] = ac[date] ? [...ac[date], a] : [a]
+                return ac
+            }, {} as {[key: string]: Activity[]})
+        )
+    }
+
     loadActivities = async () => {
         try {
             const activities = await agent.Activities.list();
