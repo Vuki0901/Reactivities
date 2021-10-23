@@ -15,7 +15,7 @@ export default observer(function ActivityDashboard() {
       }, [activityRegistry.size, loadActivities]) 
 
     return loadingInitial ? 
-    <LoadingComponent content="Loading..."/> :(
+    <LoadingComponent content="Loading activities..."/> :(
         <Grid>
             <Grid.Column width="10">
                 <ActivityList />
